@@ -1,0 +1,16 @@
+.product{
+    border-bottom: 1px solid black;
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    color: rgba(194, 23, 23, 0.678);
+    border-radius: 5px;
+    box-shadow: 5px 5px rgb(223, 223, 223);
+}
+.product .price, .product .total {
+    display: block;
+}
+.product img{
+    width: 320px;
+    height: 200px;
+}
