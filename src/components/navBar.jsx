@@ -1,7 +1,23 @@
 import './navBar.css';
 import { Link } from "react-router-dom";
+import store from '../context/storeContext';
+import { useContext } from 'react';
 
 const NavBar = () => {
+    
+    const cart = useContext(store).cart;
+
+    const getNumber = () => {
+
+        let total = 0;
+        for(let i=0; i< cart.length; i++) {
+            let prod = cart[i];
+            total += prod.quantity;
+        };
+
+        return total;
+    }
+
     return (
         <nav className="navbar navbar-expand-lg navbar-light">
         <div className="container-fluid">
@@ -14,20 +30,21 @@ const NavBar = () => {
                 <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                 </li>
-                <li className="nav-item">
+                <li className="nav-id item">
                 <Link className="nav-link" to="/catalog">Catalog</Link>
                 </li>
                 <li className="nav-item">
                 <Link className="nav-link" to="/about">About Us</Link>
                 </li>
                 <li className="nav-item">
-                <Link className="nav-link" to="/cart">Cart</Link>
+                <Link className="nav-link" to="/admin">Admin</Link>
                 </li>
-                
             </ul>
             <form className="d-flex">
-                <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                <button className="btn btn-outline-success" type="submit">Search</button>
+                <Link to="/cart" className="btn btn-outline-info">
+
+                   <span className=''>{getNumber()}</span> View Cart
+                </Link>
             </form>
             </div>
             </div>
