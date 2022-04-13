@@ -41,7 +41,7 @@ const NavBar = () => {
                 </li>
             </ul>
             <form className="d-flex">
-                <Link to="/cart" className="btn btn-outline-info">
+                <Link to="/cart" className="btn btn-outline-dark">
 
                    <span className=''>{getNumber()}</span> View Cart
                 </Link>

@@ -13,7 +13,7 @@ const ProductInCart = (props) => {
 
                 <label className="price">{props.data.price.toFixed(2)}</label>
                 <label className="quantity">{props.data.quantity}</label>
-                <label className="total">total??</label>
+                <label className="total">{props.data.price * props.data.quantity}</label>
                 <button className="btn btn-sm btn-danger">Remove</button>
             </div>
         );

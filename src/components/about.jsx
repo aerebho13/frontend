@@ -20,9 +20,10 @@ const About = () => {
 
     return (
         <div className="about-page">
-            <h1>My Online Store</h1>
+            <h2>A Meal Prep Plan for individuals who want to eat fresh and live a healthy lifestyle.</h2>
+            <img src="/imgs/meals-about.jpeg" alt="meal banner" />
             <h5>Created by: Aaron Erebholo</h5>
-            <button onClick={exercise}>Magic</button>
+            <button className="btn btn-dark" onClick={exercise}>Magic</button>
         </div>
     );
 };
